@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap');
+
+:root{
+    --mainColor:#ffc527;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    direction: rtl;
+    text-align: right;
+    font-family: 'Tajawal', sans-serif;
+
+}
+
+
+.section{
+    padding: 80px 0;
+} 
+
+.section-title{
+    position: relative;
+}
+
+.section-title::after{
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    display: block;
+    width: 120px;
+    height: 4px;
+    background-color: var(--mainColor);
+}
+
+.navbar{
+    box-shadow: 1px 2px 5px #ebebeb;
+}
+
+/*_____________________________________*/
+
+.home{
+    height: 600px;
+    background-image: url('../images/slide-bg-1.jpg');
+    background-size: cover;
+    padding: 1px;
+}
+
+.home-item{
+    width: 50%;
+    margin-right: auto;
+    margin-top: 15%;
+}
+
+.home-item h2 {
+    color: #fff;
+    font-size: 45px;
+}
+
+.home-item p {
+    color: #fff;
+    font-size: 20px;
+}
+
+@media (max-width: 768px){
+
+    .home{
+        height: 400px;
+    }
+
+    .home-item{
+        width:100%;
+    }
+}
+
+/*______________about_______________________*/
+
+
+.about__item p{
+    margin: 50px 0;
+}
+
+.about__item button{
+    margin-bottom: 15px;
+}
+
+/*________________News_________________________*/
+
+.news .news-left ,.footer-left {
+    display: flex;
+    align-items: center;
+}
+
+.news .news-left img ,.footer-left img{
+    max-width: 200px;
+    margin-left: 15px;
+}
+
+/*________________Subscribe_________________________*/
+
+.subscribe{
+    height: 450px;
+    background-image: url(../images/subscribe-our-newsletter-bg.jpg);
+    background-size: cover;
+    padding: 1px;
+    position: relative;
+}
+
+.subscribe__item{
+    width: 50%;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+
+}
+
+.subscribe__item h2{
+    font-size: 40px;
+}
+
+.subscribe__item .form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subscribe__item .form input{
+    width: 80%;
+}
+
+.subscribe__item button{
+    width: 15%;
+}
+
+@media(max-width:768px){
+
+    .subscribe__item{
+        width: 80%;
+    }
+    
+    .subscribe__item .form{
+        flex-direction: column;
+    }
+    
+    .subscribe__item .form input,
+    .subscribe__item button{
+        width: 100%;
+    }
+}
+
+/*________________Footer_________________________*/
+footer{
+    background-color: #071c33;
+    color: #fff;
+}
+
+footer h3{
+    background-color: #fff;
+    color: #222;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0 0 10px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+}
+
+.footer-left {
+    font-size: 12px;
+}
+
+.footer-left img{
+    max-width: 50px;
+}
+
+/*^^^^^^^^^^^^^^^^^^Blog^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+
+.breadcrumb{
+    margin: 0;
+    justify-content: flex-end;
+}
+
+.breadcrumb-item+.breadcrumb-item::before{
+    float: right;
+}
+
+.blog .jumbotron{
+display: flex;
+justify-content: space-between;
+border-bottom: 2px solid var(--mainColor);
+
+}
+
+.blog .jumbotron .blog-desc{
+    width: 55%;
+}
+
+.blog .jumbotron .blog-desc h4{
+    font-size: 18px;
+}
+
+.blog .jumbotron .blog-img{
+    width: 40%;
+}
