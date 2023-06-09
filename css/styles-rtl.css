@@ -40,6 +40,45 @@ body{
     box-shadow: 1px 2px 5px #ebebeb;
 }
 
+.navbar-brand{
+    opacity: 0;
+    animation: SlideLeft 1s ease forwards;
+}
+
+.nav-link{
+    opacity: 0;
+    animation: SlideTop 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+@keyframes SlideLeft {
+
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0);
+        opacity: 1 ;
+    }
+    
+}
+
+@keyframes SlideTop {
+
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1 ;
+    }
+    
+}
+
 /*_____________________________________*/
 
 .home{
@@ -98,15 +137,27 @@ body{
     max-width: 200px;
     margin-left: 15px;
 }
+.card {
+    overflow: hidden;
+}
+.card-img-top{
+  width: 100%;
+  transition: 0.5s all ease-in-out;
+}
+
+.card-img-top:hover {
+    transform: scale(1.1);
+
+}
 
 /*________________Subscribe_________________________*/
 
 .subscribe{
     height: 450px;
     background-image: url(../images/subscribe-our-newsletter-bg.jpg);
-    background-size: cover;
-    padding: 1px;
     position: relative;
+    background-attachment: fixed;
+
 }
 
 .subscribe__item{
